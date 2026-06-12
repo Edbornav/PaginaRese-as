@@ -1,0 +1,39 @@
+<main class="form-container">
+    <h2 class="form-title">Solicitar Nuevo Ítem</h2>
+    <form id="requestForm" class="auth-form">
+        <div class="form-group">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" required placeholder="Nombre del contenido">
+        </div>
+        <div class="form-group">
+            <label for="category">Categoría</label>
+            <select id="category" name="category" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="videogame">Videojuego</option>
+                <option value="movie">Película</option>
+                <option value="series">Serie</option>
+                <option value="anime">Anime</option>
+                <option value="music">Música</option>
+            </select>
+        </div>
+            <div class="form-group">
+                <label for="coverImage">Imagen de portada</label>
+                <input type="file" id="coverImage" accept="image/*">
+            </div>
+        <div class="form-group">
+            <label for="releaseDate">Fecha de lanzamiento</label>
+            <input type="date" id="releaseDate" name="releaseDate">
+        </div>
+        <div class="form-group">
+            <label for="creator">Creador</label>
+            <input type="text" id="creator" name="creator" placeholder="Desarrollador, director, artista...">
+        </div>
+        <div class="form-group">
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe brevemente el contenido"></textarea>
+        </div>
+        <div id="error-message" class="error-message hidden"></div>
+        <div id="success-message" class="success-message hidden"></div>
+        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+    </form>
+</main>

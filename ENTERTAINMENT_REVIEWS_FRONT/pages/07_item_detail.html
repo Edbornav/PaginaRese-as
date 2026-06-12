@@ -1,0 +1,32 @@
+<main>
+    <div id="itemDetail" class="item-detail"></div>
+    <section class="reviews-section">
+        <h3 class="section-title">Reseñas</h3>
+        <div id="reviewForm" class="review-form-container hidden">
+            <h4>Escribe tu reseña</h4>
+            <form id="reviewFormElement">
+                <div class="rating-stars" id="ratingStars">
+                    <span class="star" data-value="0">0</span>
+                    <span class="star" data-value="1">1</span>
+                    <span class="star" data-value="2">2</span>
+                    <span class="star" data-value="3">3</span>
+                    <span class="star" data-value="4">4</span>
+                    <span class="star" data-value="5">5</span>
+                    <span class="star" data-value="6">6</span>
+                    <span class="star" data-value="7">7</span>
+                    <span class="star" data-value="8">8</span>
+                    <span class="star" data-value="9">9</span>
+                    <span class="star" data-value="10">10</span>
+                </div>
+                <input type="hidden" id="ratingValue" value="0">
+                <div class="form-group">
+                    <label for="comment">Comentario</label>
+                    <textarea id="comment" name="comment" required placeholder="Escribe tu reseña aquí..." rows="4"></textarea>
+                </div>
+                <div id="reviewError" class="error-message hidden"></div>
+                <button type="submit" class="btn btn-primary">Publicar Reseña</button>
+            </form>
+        </div>
+        <div id="reviewsList" class="reviews-list"></div>
+    </section>
+</main>

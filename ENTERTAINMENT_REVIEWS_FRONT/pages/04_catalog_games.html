@@ -1,0 +1,50 @@
+<main class="catalog-page">
+    <div class="catalog-header">
+        <h2 class="catalog-title">🎮 Videojuegos</h2>
+        <span class="badge badge-games">Videojuegos</span>
+    </div>
+    <div id="catalogGrid" class="catalog-grid"></div>
+    <div id="editItemContainer" class="review-form-container hidden">
+        <h4>Editar Ítem</h4>
+        <form id="editItemForm" class="auth-form">
+            <div class="form-group">
+                <label for="editTitle">Título</label>
+                <input type="text" id="editTitle" required placeholder="Nombre del contenido">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="editCategory">Categoría</label>
+                    <select id="editCategory" required>
+                        <option value="">Seleccionar</option>
+                        <option value="videogame">Videojuego</option>
+                        <option value="movie">Película</option>
+                        <option value="series">Serie</option>
+                        <option value="anime">Anime</option>
+                        <option value="music">Música</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editReleaseDate">Fecha de lanzamiento</label>
+                    <input type="date" id="editReleaseDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="editCreator">Creador</label>
+                <input type="text" id="editCreator" placeholder="Desarrollador, director, artista...">
+            </div>
+            <div class="form-group">
+                <label for="editCoverImage">Imagen de portada</label>
+                <input type="file" id="editCoverImage" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="editDescription">Descripción</label>
+                <textarea id="editDescription" rows="3" placeholder="Descripción del contenido"></textarea>
+            </div>
+            <div id="editItemError" class="error-message hidden"></div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                <button type="button" class="btn btn-outline" id="cancelEditBtn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</main>

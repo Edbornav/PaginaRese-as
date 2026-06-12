@@ -1,0 +1,51 @@
+<main>
+    <div class="admin-header">
+        <h2 class="admin-title">Panel de Administración</h2>
+        <a href="#11_admin_requests" class="btn btn-secondary">Gestionar Solicitudes</a>
+    </div>
+    <div class="admin-add-form">
+        <h3 class="section-title">Agregar Ítem al Catálogo</h3>
+        <form id="addItemForm" class="auth-form">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" required placeholder="Nombre del contenido">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="category">Categoría</label>
+                    <select id="category" name="category" required>
+                        <option value="">Seleccionar</option>
+                        <option value="videogame">Videojuego</option>
+                        <option value="movie">Película</option>
+                        <option value="series">Serie</option>
+                        <option value="anime">Anime</option>
+                        <option value="music">Música</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="releaseDate">Fecha de lanzamiento</label>
+                    <input type="date" id="releaseDate" name="releaseDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="creator">Creador</label>
+                <input type="text" id="creator" name="creator" placeholder="Desarrollador, director, artista...">
+            </div>
+            <div class="form-group">
+                <label for="coverImage">Imagen de portada</label>
+                <input type="file" id="coverImage" accept="image/*">
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea id="description" name="description" rows="3" placeholder="Descripción del contenido"></textarea>
+            </div>
+            <div id="addItemError" class="error-message hidden"></div>
+            <div id="addItemSuccess" class="success-message hidden"></div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Agregar al Catálogo</button>
+            </div>
+        </form>
+    </div>
+    <h3 class="section-title" style="margin: 2rem 1rem 1rem; max-width: 1200px; margin-left: auto; margin-right: auto;">Catálogo Actual</h3>
+    <div id="adminCatalog" class="admin-catalog"></div>
+</main>

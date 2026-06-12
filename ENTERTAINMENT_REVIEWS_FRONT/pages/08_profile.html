@@ -1,0 +1,30 @@
+<main>
+    <div class="profile-header">
+        <h2 class="profile-title">Mis Reseñas</h2>
+    </div>
+    <div id="myReviews" class="reviews-list"></div>
+    <div id="editReviewContainer" class="review-form-container hidden">
+        <h4>Editar reseña</h4>
+        <form id="editReviewFormElement">
+            <div class="rating-stars" id="profileRatingStars">
+                <span class="star" data-value="1">1</span>
+                <span class="star" data-value="2">2</span>
+                <span class="star" data-value="3">3</span>
+                <span class="star" data-value="4">4</span>
+                <span class="star" data-value="5">5</span>
+                <span class="star" data-value="6">6</span>
+                <span class="star" data-value="7">7</span>
+                <span class="star" data-value="8">8</span>
+                <span class="star" data-value="9">9</span>
+                <span class="star" data-value="10">10</span>
+            </div>
+            <input type="hidden" id="profileRatingValue" value="0">
+            <textarea id="profileComment" rows="4" placeholder="Escribe tu reseña..." required></textarea>
+            <div id="profileReviewError" class="error hidden"></div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                <button type="button" class="btn btn-outline" id="profileCancelEditBtn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</main>
