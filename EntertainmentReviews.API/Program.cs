@@ -21,9 +21,10 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.SetIsOriginAllowed(_ => true)
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowAnyHeader()
+              .AllowCredentials();
     });
 });
 
@@ -72,18 +73,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.Use((context, next) =>
-{
-    if (context.Request.Method == "OPTIONS")
-    {
-        context.Response.StatusCode = 200;
-        context.Response.Headers["Access-Control-Allow-Origin"] = context.Request.Headers["Origin"];
-        context.Response.Headers["Access-Control-Allow-Methods"] = "GET,POST,PUT,DELETE,OPTIONS";
-        context.Response.Headers["Access-Control-Allow-Headers"] = "Content-Type,Authorization";
-        return Task.CompletedTask;
-    }
-    return next();
-});
 app.UseCors();
 app.UseStaticFiles();
 app.UseAuthentication();
