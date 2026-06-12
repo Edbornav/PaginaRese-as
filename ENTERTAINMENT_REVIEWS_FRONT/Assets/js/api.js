@@ -1,6 +1,6 @@
 const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api'
-    : 'https://lively-determination-production-5256.up.railway.app/api';
+    : 'https://entertainment-reviews-api-mdf2.onrender.com/api';
 const CLOUDINARY_CLOUD_NAME = 'dfcbsqxfq';
 const CLOUDINARY_UPLOAD_PRESET = 'IMAGENES';
 
