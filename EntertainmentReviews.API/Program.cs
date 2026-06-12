@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowAlways", policy =>
     {
         policy.SetIsOriginAllowed(_ => true)
               .AllowAnyMethod()
@@ -73,7 +73,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors();
+app.UseCors("AllowAlways");
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
