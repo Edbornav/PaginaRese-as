@@ -6,6 +6,9 @@ obj/
 *.cache
 *.vs/
 
+# Node
+node_modules/
+
 # Environment
 .env
 appsettings.Development.json
